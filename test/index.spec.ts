@@ -31,7 +31,7 @@ describe('simple-metrics', () => {
 
   it('should not allow altering internal state', async () => {
     const deferred = pDefer()
-    let list: Array<Record<string, any>> = []
+    const list: Array<Record<string, any>> = []
 
     s = simpleMetrics({
       onMetrics: (metrics) => {
@@ -45,7 +45,7 @@ describe('simple-metrics', () => {
     })({})
 
     const group = s.registerMetricGroup('foo')
-    group.update({ bar: 5})
+    group.update({ bar: 5 })
 
     await start(s)
 

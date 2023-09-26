@@ -116,7 +116,7 @@ export interface SimpleMetricsInit {
 
 class SimpleMetrics implements Metrics, Startable {
   public metrics = new Map<string, DefaultMetric | DefaultGroupMetric | CalculateMetric>()
-  private transferStats: Map<string, number>
+  private readonly transferStats: Map<string, number>
   private started: boolean
   private interval?: ReturnType<typeof setInterval>
   private readonly intervalMs: number
