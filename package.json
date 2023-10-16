@@ -136,7 +136,7 @@
     "it-stream-types": "^2.0.1"
   },
   "devDependencies": {
-    "aegir": "^40.0.13",
+    "aegir": "^41.0.5",
     "p-defer": "^4.0.0"
   }
 }
